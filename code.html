@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SexyBot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <!-- s3slider -->
+    <script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#featured_slide_').s3Slider({
+                timeOut:6000
+            });
+        });
+    </script>
+    <!-- / s3slider -->
+</head>
+<body id="top">
+<div class="wrapper col1">
+    <div id="header">
+        <div id="topnav">
+            <ul>
+                <li><a href="gallery.html">Pictures and Videos</a><span></span></li>
+                <li class="active"><a href="#">Source Code</a><span></span></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="strategy.html">Strategy</a></li>
+                <li><a href="index.html">Homepage</a><span></span></li>
+            </ul>
+        </div>
+        <div class="fl_left">
+            <h1><a href="index.html">SexyBot</a></h1>
+            <p>OS Robot Competition</p>
+        </div>
+        <br class="clear" />
+    </div>
+</div>
+<div class="col4">
+    <div id="container">
+        <div class="wrapper">
+            <h1>Code of the robot</h1>
+           <p>The full code of the robot can be found at <a href="https://github.com/asemma/OS.git" title="Git depot of sexybot">Gitlab repository</a>. </p>
+        </div>
+        <div class="wrapper">
+            <h1>Structure of SexyBot code</h1>
+            <p>
+                The different parts in the code of the robot are:
+            </p>
+                <ul>
+                    <li>
+                        The kernel
+                    </li>
+                    <li>
+                        The sensors
+                    </li>
+                    <li>
+                        The motors
+                    </li>
+                    <li>
+                        The bluetooth interface
+                    </li>
+                </ul>
+        </div>
+        <div class="wrapper">
+            <h2>The kernel</h2>
+            <p>The core of the code of the robot is a function responsible to launch the different thread at the beginning of the programm.<\br>
+              This function will then apply the strategy of the robot while regularly polling the sensors and the bluetooth threads in order to
+              to respond to its environment.</p>
+        </div>
+        <div class="wrapper">
+            <h2>The sensors</h2>
+            <p>Each sensor works in its own thread in order to keep working in the background. They will regularly update the output of the sensor
+               so that the main thread can access this value when needed.</p>
+        </div>
+    </div>
+</div>
+<div class="wrapper col5">
+    <div id="footer">
+        <p class="fl_left">The SexyBot team: Bonnafoux Luc, Chevalier Mathieu, Daubress Nicolas, Semma Amine </p>
+        <p class="fl_right">OS Course, EURECOM</p>
+        <br class="clear" />
+    </div>
+</div>
+</body>
+</html>
