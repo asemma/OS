@@ -21,10 +21,11 @@
     <div id="header">
         <div id="topnav">
             <ul>
-                <li><a href="gallery.html">Pictures and Videos</a><span></span></li>
+                <li><a href="work.html">Work repartition</a></li>
+                <li><a href="galery.html">Pictures and Videos</a><span></span></li>
                 <li class="active"><a href="#">Source Code</a><span></span></li>
+                <li><a href="algorithms.html">Algorithms</a></li>
                 <li><a href="architecture.html">Architecture</a></li>
-                <li><a href="strategy.html">Strategy</a></li>
                 <li><a href="index.html">Homepage</a><span></span></li>
             </ul>
         </div>
@@ -37,18 +38,18 @@
 </div>
 <div class="col4">
     <div id="container">
-        <div class="wrapper">
-            <h1>Code of the robot</h1>
-           <p>The full code of the robot can be found at <a href="https://github.com/asemma/OS.git" title="Git depot of sexybot">Gitlab repository</a>. </p>
+        <div class="wrapper-text">
+          <h1>Code of the robot</h1>
+          <p>The full code of the robot can be found at <a href="https://github.com/Daudau/OS" target="_blank" title="Git depot of sexybot">Github repository</a>. </p>
         </div>
-        <div class="wrapper">
+        <div class="wrapper-text">
             <h1>Structure of SexyBot code</h1>
             <p>
                 The different parts in the code of the robot are:
             </p>
                 <ul>
                     <li>
-                        The kernel
+                        The main program
                     </li>
                     <li>
                         The sensors
@@ -61,16 +62,16 @@
                     </li>
                 </ul>
         </div>
-        <div class="wrapper">
-            <h2>The kernel</h2>
-            <p>The core of the code of the robot is a function responsible to launch the different thread at the beginning of the programm.<\br>
-              This function will then apply the strategy of the robot while regularly polling the sensors and the bluetooth threads in order to
-              to respond to its environment.</p>
-        </div>
-        <div class="wrapper">
-            <h2>The sensors</h2>
-            <p>Each sensor works in its own thread in order to keep working in the background. They will regularly update the output of the sensor
-               so that the main thread can access this value when needed.</p>
+        <div class="wrapper-text">
+            <h1>Installation</h1>
+            <p>First step: clone the repository</p>
+            <code>git clone git@github.com:Daudau/OS.git</code>
+            <p>Second step: push it on the ev3 robot using scp</p>
+            <code>scp -r OS/ [username]@[robot_ip]:~</code>
+            <p>Third step: on the robot go into the program directory and compile the code</p>
+            <code>cd ~/OS<br></code><code>make clean; make install</code>
+            <p>Last step: run the program</p>
+            <code>./bin/sexybot</code>
         </div>
     </div>
 </div>
