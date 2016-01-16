@@ -66,21 +66,19 @@
 
 				<b>is_ball function</b><br>
 				* This function is quite simple but might be slightly modified before the competition. <br>
-				* When we enter this function we are facing a supposed ball.
+				* When we enter this function we are facing a supposed ball.<br>
 				* We then turn of -25 degrees and record the distance, and turn of +50 and record a second distance, before turning again toward the ball.<br>
 				* If we are facing a wall the distance to the supposed ball and the two other are going to be almost the same<br>
 				* But if we are facing a ball the newly recorded distances will be quite different comparing to the distance to the ball
-				<b>Scan function</b><br>
-
-
-			
-
-
 			</p>
         </div>
         <div class="wrapper-text">
             <h1>Follower algorithm</h1>
-            <p>Put the follower algorithm here.</p>
+			<p>This function is quite simple to describe but more difficult to implement. The basic idea is that:<br><dd>
+			* We keep tracks of position of the robot before us (the leader for example).<br>
+			* When it sends us information (angle, distance of movement) we compute where it is going to be and move toward this position minus 20 (so we do not hurt the robot)<br>
+			* Similar "dodge" strategies are applied when we face an obstacle<br>
+			</dd></p>
         </div>
     </div>
 </div>
