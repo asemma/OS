@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SexyBot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <!-- s3slider -->
+    <script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#featured_slide_').s3Slider({
+                timeOut:6000
+            });
+        });
+    </script>
+    <!-- / s3slider -->
+</head>
+<body id="top">
+<div class="wrapper col1">
+    <div id="header">
+        <div id="topnav">
+            <ul>
+                <li class="active"><a href="#">Work repartition</a><span></span></li>
+                <li><a href="galery.html">Pictures and Videos</a></li>
+                <li><a href="code.html">Source Code</a><span></span></li>
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="index.html">Homepage</a><span></span></li>
+            </ul>
+        </div>
+        <div class="fl_left">
+            <h1><a href="index.html">SexyBot</a></h1>
+            <p>OS Robot Competition</p>
+        </div>
+        <br class="clear" />
+    </div>
+</div>
+<div class="col4">
+    <div id="container">
+        <div class="wrapper-text">
+            <h1>Luc Bonnafoux</h1>
+            <p> Luc started by taking part in the design of the robot. He took part in the repartition of the different sensors on the robot and the creation of its architecture so that it will be able to complete the challenges of the competition.<br><br>
+                After that Luc developed the code of the sensors of the robot. For this, he created the threads that will read the values from the sensors, filter them and send them to the main AI of the robot. This part was later improved by Nicolas.<br>
+                Finaly, Luc took care of creating the different pages of the website and writing a part of its content.</p>
+        </div>
+        <div class="wrapper-text">
+            <h1>Mathieu Chevalier</h1>
+            <p>Mathieu, with Nicolas, was at first responsible of the implementation of the main algorithms. Mathieu worked in a first step, with Nicolas in order to design and implement a first version of the artificial inteligence of the robot. They both took care of the creation of the different mutex and thread that would be used. <br> <br>
+Yet after the fail of the first evaluation of the robot (14th of december), and due to the fact that parts that should have been ready were not working. Mathieu also took the part of the implementation of the motors. From this point Mathieu and Nicolas decided of another repartition of the work, supporting the majority of it.<br> <br>
+Mathieu completed a first version of the file "motor.c" which is used to make the robot move and turn. after that Mathieu and Nicolas worked almost entirely together, reimplementing continuously the different functions to produce the final program that they hope will work, and the content of this website. The repartition of the work between the two of them was smooth. 
+</p>
+        </div>
+        <div class="wrapper-text">
+            <h1>Nicolas Daubresse</h1>
+            <p>Like Mathieu, Nicolas was first responsible for the implementation of the main algorithms which would decide of the inteligence of the robot. They worked together to create a first version of it, which sadly was not used during the first evaluation of the robot contest as essential bricks (like the motor part or the sensor part) did not work. <br><br>
+After this faillure Nicolas took care of improving the sensor part and the bluetooth part and also started to integrate the different parts together during the holidays.<br><br>
+After the holidays he worked with Mathieu, creating what is now the program during almost 3 full times weeks of hard work, and finally this website. 
+</p>
+        </div>
+        <div class="wrapper-text">
+            <h1>Amine Semma</h1>
+            <p> Amine took part of the design of the robot and took part in the repartitions of the tasks. He was responsible of delaing with the motors according to a well defined API. The first version was tested and worked well.
+                There was one problem: we weren't clear in the bigining where to handle the orientation of the robot and it was done in both the motors part and AI which did not worked well.
+                Finally, Amine created the website with a dynamic main webpage and a gallery, hosted it on his github account and wrote a part of its content. </p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper col5">
+    <div id="footer">
+        <p class="fl_left">The SexyBot team: Bonnafoux Luc, Chevalier Mathieu, Daubress Nicolas, Semma Amine </p>
+        <p class="fl_right">OS Course, EURECOM</p>
+        <br class="clear" />
+    </div>
+</div>
+</body>
+</html>

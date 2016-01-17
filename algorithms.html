@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SexyBot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <!-- s3slider -->
+    <script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#featured_slide_').s3Slider({
+                timeOut:6000
+            });
+        });
+    </script>
+    <!-- / s3slider -->
+</head>
+<body id="top">
+<div class="wrapper col1">
+    <div id="header">
+        <div id="topnav">
+            <ul>
+                <li><a href="work.html">Work repartition</a><span></span></li>
+                <li><a href="galery.html">Pictures and Videos</a></li>
+                <li><a href="code.html">Source Code</a><span></span></li>
+                <li class="active"><a href="#">Algorithms</a><span></span></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="index.html">Homepage</a><span></span></li>
+            </ul>
+        </div>
+        <div class="fl_left">
+            <h1><a href="index.html">SexyBot</a></h1>
+            <p>OS Robot Competition</p>
+        </div>
+        <br class="clear" />
+    </div>
+</div>
+<div class="col4">
+    <div id="container">
+        <div class="wrapper-text">
+			<p>Let's remarque that different versions of the program have been created in order to face the different condition of evaluation (little/big arena etc...). Also the first that we do, whatever the conditions, is to create the different threads and mutex (angle of the robot, distance acquired by the ultrasound sensor, robot position, robot state, bluetooth communication). Then we contact the server in order to connect to it, and wait for its answer to know wheter we are foing to launch the "Leader algorithm" or the "Follower algorithm".</p>
+            <h1>Leader algorithm</h1>
+			<p>The main idea of this algorithm is that:<br>
+			* We move only if there is nothing in front of us<br>
+			<dd>	* If there is nothing in front of us, then we move towards a predifined ball position<br>
+					* We always move of the minimum between the remaining distance to the ball-30cm and 15cm <br>
+					* We always stop 30cm before the targeted ball position so that our sensors are effective<br>
+					* When we arrive at this destination we launch the scan function described below <br><br></dd>
+			* If we face something then we check whether it is a ball or not thanks to the "is_ball" function<br>
+			<dd>	* If we already grabbed a ball and we determine that the obstacle in front of us is a ball, then we do not take it into account<br>
+				* If we have not grabbed anything yet and the obstacle is determined as a ball by the function then we grab the ball.<br>
+				* If it is not a ball then we check it 5 times (we expect that if it is a robot it is going to move during this period).<br> 
+				* If after that we are still facing an obstacle then being at the position (x,y) we go to the position (-x,y).<br>
+				* Notice that if the obstacle appears when we are going back with a ball and we are "near" (0,0) then it is most likely the wall near our final destination and we do not take it into account. <br><br></dd>
+				Each times we move we send the corresponding information by bluetooth.<br><br><br>
+
+				<b>scan function</b><br>
+				* We are looking for the ball in this function.<br>
+				* We scan our surrounding by turning of a given angle (usually rotation of 160 degrees), and move slowly (1 degree by 1 degree) recording the seen distance of the ultrasound sensor and the angle each time. <br>
+				* Once we have the recorded everything if we have seen something below 40cm we filter those points (we cannot see the ball if it is after this limit). On those points we, then, create an "ilot" which is an aggregation of points which are consecutive in the acquisition and have similar characteristics (angle, distance). An "ilot" is a 3-upplet (Average of the angle, Average of the distance, Number of points)<br>
+				* Then we select the "best ilot to be the ball".<br>
+				* A good "ilot" is not too big because it would then most likely be a wall.<br>
+				* We then face the supposed ball or keep going if no ball was detecting<br>
+				* Notice that in this function we repeatively scan and move of 15cm  until we face a wall. When we face a wall we enter an other function in order to go to an other predefined position, guessing that this ball was previously grabbed or moved by another robot.<br><br>
+
+				<b>is_ball function</b><br>
+				* This function is quite simple but might be slightly modified before the competition. <br>
+				* When we enter this function we are facing a supposed ball.<br>
+				* We then turn of -25 degrees and record the distance, and turn of +50 and record a second distance, before turning again toward the ball.<br>
+				* If we are facing a wall the distance to the supposed ball and the two other are going to be almost the same<br>
+				* But if we are facing a ball the newly recorded distances will be quite different comparing to the distance to the ball
+			</p>
+        </div>
+        <div class="wrapper-text">
+            <h1>Follower algorithm</h1>
+			<p>This function is quite simple to describe but more difficult to implement. The basic idea is that:<br><dd>
+			* We keep tracks of position of the robot before us (the leader for example).<br>
+			* When it sends us information (angle, distance of movement) we compute where it is going to be and move toward this position minus 20 (so we do not hurt the robot)<br>
+			* Similar "dodge" strategies are applied when we face an obstacle<br>
+			</dd></p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper col5">
+    <div id="footer">
+        <p class="fl_left">The SexyBot team: Bonnafoux Luc, Chevalier Mathieu, Daubress Nicolas, Semma Amine </p>
+        <p class="fl_right">OS Course, EURECOM</p>
+        <br class="clear" />
+    </div>
+</div>
+</body>
+</html>
