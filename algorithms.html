@@ -39,7 +39,7 @@
 <div class="col4">
     <div id="container">
         <div class="wrapper-text">
-			<p>Let's remarque that different versions of the program have been created in order to face the different condition of evaluation (little/big arena etc...). Also the first that we do, whatever the conditions, is to create the different threads and mutex (angle of the robot, distance acquired by the ultrasound sensor, robot position, robot state, bluetooth communication). Then we contact the server in order to connect to it, and wait for its answer to know wheter we are foing to launch the "Leader algorithm" or the "Follower algorithm".</p>
+			<p>Let's remarque that different versions of the program have been created in order to face the different condition of evaluation (little/big arena etc...). Also the first thing that we do, whatever the conditions, is to create the different threads and mutex (angle of the robot, distance acquired by the ultrasound sensor, robot position, robot state, bluetooth communication). Then we contact the server in order to connect to it, and wait for its answer to know whether we are going to launch the "Leader algorithm" or the "Follower algorithm".</p>
             <h1>Leader algorithm</h1>
 			<p>The main idea of this algorithm is that:<br>
 			* We move only if there is nothing in front of us<br>
@@ -58,11 +58,11 @@
 				<b>scan function</b><br>
 				* We are looking for the ball in this function.<br>
 				* We scan our surrounding by turning of a given angle (usually rotation of 160 degrees), and move slowly (1 degree by 1 degree) recording the seen distance of the ultrasound sensor and the angle each time. <br>
-				* Once we have the recorded everything if we have seen something below 40cm we filter those points (we cannot see the ball if it is after this limit). On those points we, then, create an "ilot" which is an aggregation of points which are consecutive in the acquisition and have similar characteristics (angle, distance). An "ilot" is a 3-upplet (Average of the angle, Average of the distance, Number of points)<br>
+				* Once we have recorded everything if we have seen something below 40cm we filter those points (we cannot see the ball if it is after this limit). On those points we, then, create an "ilot" which is an aggregation of points which are consecutive in the acquisition and have similar characteristics (angle, distance). An "ilot" is a 3-upplet (Average of the angle, Average of the distance, Number of points)<br>
 				* Then we select the "best ilot to be the ball".<br>
 				* A good "ilot" is not too big because it would then most likely be a wall.<br>
 				* We then face the supposed ball or keep going if no ball was detecting<br>
-				* Notice that in this function we repeatively scan and move of 15cm  until we face a wall. When we face a wall we enter an other function in order to go to an other predefined position, guessing that this ball was previously grabbed or moved by another robot.<br><br>
+				* Notice that in this function we repeatively scan and move of 15cm until we face a wall. When we face a wall we enter an other function in order to go to an other predefined position, guessing that this ball was previously grabbed or moved by another robot.<br><br>
 
 				<b>is_ball function</b><br>
 				* This function is quite simple but might be slightly modified before the competition. <br>
@@ -75,8 +75,8 @@
         <div class="wrapper-text">
             <h1>Follower algorithm</h1>
 			<p>This function is quite simple to describe but more difficult to implement. The basic idea is that:<br><dd>
-			* We keep tracks of position of the robot before us (the leader for example).<br>
-			* When it sends us information (angle, distance of movement) we compute where it is going to be and move toward this position minus 20 (so we do not hurt the robot)<br>
+			* We keep tracks of the position of the robot before us (the leader for example).<br>
+			* When it sends us information (angle, distance of movement) we compute where it is going to be and move toward this position minus 20 (so we do not collide with the robot in front of us)<br>
 			* Similar "dodge" strategies are applied when we face an obstacle<br>
 			</dd></p>
         </div>
