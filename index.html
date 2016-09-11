@@ -1,68 +1,275 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>SexyBot</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-<!-- s3slider -->
-<script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$('#featured_slide_').s3Slider({
-		timeOut:6000 
-	});
-});
-</script>
-<!-- / s3slider -->
-</head>
-<body id="top">
-<div class="wrapper col1">
-  <div id="header">
-    <div id="topnav">
-      <ul>
-        <li><a href="work.html">Work repartition</a></li>
-        <li><a href="galery.html">Pictures and Videos</a><span></span></li>
-        <li><a href="code.html">Source Code</a><span></span></li>
-        <li><a href="algorithms.html">Algorithms</a><span></span></li>
-        <li><a href="architecture.html">Architecture</a></li>
-        <li class="active"><a href="#">Homepage</a><span></span></li>
-      </ul>
-    </div>
-    <div class="fl_left">
-      <h1><a href="index.html">SexyBot</a></h1>
-      <p>OS Robot Competition</p>
-    </div>
-    <br class="clear" />
-  </div>
-</div>
-<div class="wrapper col2">
-  <div id="featured_slide_">
-    <ul id="featured_slide_Content">
-      <li class="featured_slide_Image"><img src="resources/images/homepage/1.png" alt="" /></a>
-        <div class="introtext">
-          <h2>SexyBot in Action</h2>
-        </div>
-      </li>
-	  <li class="featured_slide_Image"><img src="resources/images/homepage/2.jpg" alt="" /></a>
-        <div class="introtext">
-          <h2>Again ...</h2>
-        </div>
-      </li>
-	  <li class="clear featured_slide_Image">  
-      </li>
-    </ul>
-  </div>
-</div>
-<div>
-  <center><h1>A Eurecom project for the 2016 OS course. </h1></center>
-</div>
-<div class="wrapper col5">
-    <div id="footer">
-        <p class="fl_left">The SexyBot team: Bonnafoux Luc, Chevalier Mathieu, Daubress Nicolas, Semma Amine </p>
-        <p class="fl_right">OS Course, EURECOM</p>
-        <br class="clear" />
-    </div>
-</div>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV Amine</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    	<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#about">Moi</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#recommandations">Recommandations</a></li>
+                    </ul>
+                </div>
+            
+            </div>
+        
+        </nav>
+
+    	<section id="about" class="container-fluid">
+    		<div class="col-xs-8 col-md-4 profile-picture">
+    			<img src="images/me.jpg" alt="Amine" class="img-circle">
+    		</div>
+    		<div class="heading">
+    			<h1>Hello, Moi c'est Amine</h1>
+    			<h3>Expert Sécurité</h3>
+    			<a href="docs/CV_Amine_SEMMA.pdf" class="button1">Télécharger CV</a>
+    		</div>
+    	</section>
+
+    	<section id="skills">
+    		<div class="red-divider"></div>
+    		<div class="heading">
+    			<h2>Conpétences</h2>
+    		</div>
+    		<div class="container">
+    			<div class="row">
+
+    				<div class="col-md-6">
+    					<div class="progress"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <h5>SECURITE 80%</h5>
+                            </div>
+                        </div>
+    					<div class="progress">
+    						<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    							<h5>CLOUD 60%</h5>
+    						</div>
+    					</div>
+    					<div class="progress">
+    						<div class="progress-bar" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    							<h5>BIG DATA 60%</h5>
+    						</div>
+    					</div>
+    				</div>
+
+    				<div class="col-md-6">
+    					<div class="progress">
+    						<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+    							<h5>SYSTEMES EMBARQUES 90%</h5>
+    						</div>
+    					</div>
+    					<div class="progress">
+    						<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+    							<h5>DEV WEB 40%</h5>
+    						</div>
+    					</div>
+    					<div class="progress">
+    						<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+    							<h5>TSENTI7 100%</h5>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+
+    	<section id="experience">
+    		<div class="container">
+    			<div class="white-divider"></div>
+    			<div class="heading">
+    				<h2>Expérience professionelle</h2>
+    			</div>
+    			<ul class="timeline">
+    				<li>
+    					<div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></span></div>
+    					<div class="timeline-panel-container">
+    						<div class="timeline-panel">
+    							<div class="timeline-heading">
+    								<h3>SOCIETE GENERALE</h3>
+    								<h4>Analyste Sécurité</h4>
+    								<p class=text-muted><small class="glyphicon glyphicon-time"></small> 2016</p>
+    							</div>
+    							<div class="timeline-body">
+    								<p>Search, Evaluation, Audit and Deployment of Innovative Solutions for Information Systems Security in the Banking Sector</p>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+
+    				<li>
+    					<div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></span></div>
+    					<div class="timeline-panel-container-inverted">
+    						<div class="timeline-panel">
+    							<div class="timeline-heading">
+    								<h3>EMC SATCOM</h3>
+    								<h4>Ingénieur R&D</h4>
+    								<p class=text-muted><small class="glyphicon glyphicon-time"></small> 2014</p>
+    							</div>
+    							<div class="timeline-body">
+    								<p>Proposition, Implementation and Deployment of a Solution Against Erasures over IP Layer for Satellite Communications : Software and Hardware Design, Implementation and Deployment</p>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+    				
+    				<li>
+    					<div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></span></div>
+    					<div class="timeline-panel-container">
+    						<div class="timeline-panel">
+    							<div class="timeline-heading">
+    								<h3>TELECOM BRETAGNE</h3>
+    								<h4>Ingénieur R&D</h4>
+    								<p class=text-muted><small class="glyphicon glyphicon-time"></small> 2013</p>
+    							</div>
+    							<div class="timeline-body">
+    								<p>Implementation and Optimization of Precoded Turbocodes</p>
+    							</div>
+    						</div>
+    					</div>
+    				</li>
+    			</ul>
+    		</div>
+    	</section>
+
+    	<section id="education">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-6">
+    					<div class="education-block">
+    						<h5>2015-2016</h5>
+    						<span class="glyphicon glyphicon-education"></span>
+    						<h3>Eurecom</h3>
+    						<h4>Engineering in Communication Systems Security and Computer Science</h4>
+    						<div class="red-divider"></div>
+    						<p>IT Security</p>
+    						<p>Artificial Intelligence</p>
+    					</div>
+    				</div>
+					<div class="col-sm-6">
+						<div class="education-block">
+    						<h5>2012-2016</h5>
+    						<span class="glyphicon glyphicon-education"></span>
+    						<h3>Telecom Bretagne</h3>
+    						<h4>Engineering in Information Technology</h4>
+    						<div class="red-divider"></div>
+    						<p>Information Technology</p>
+    						<p>Digital Signal Processing, Network, Computer Science, Electronics and Embedded Systems</p>
+    					</div>
+					</div>    				
+    			</div>
+    		</div>
+    	</section>
+
+    	<section id="portfolio">
+    		<div class="container">
+    			<div class="white-divider"></div>
+    			<div class="heading">
+    				<h2>Portfolio</h2>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="https://www.facebook.com/amine.semma.5/about" target="_blank">
+    						<img src="images/facebook-share.png">
+    					</a>
+    				</div>
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="http://www.google.com" target="_blank">
+    						<img src="images/google-translate.png">
+    					</a>
+    				</div>
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="http://www.twitter.com" target="_blank">
+    						<img src="images/twitter-video.png">
+    					</a>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="https://youtu.be/Z46assXAvck" target="_blank">
+    						<img src="images/youtube.png">
+    					</a>
+    				</div>
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="https://fr.linkedin.com/in/amine-semma-04b20684" target="_blank">
+    						<img src="images/linked-in.png">
+    					</a>
+    				</div>
+    				<div class="col-sm-4">
+    					<a class="thumbnail" href="https://www.facebook.com/amine.semma.5/about" target="_blank">
+    						<img src="images/facebook-video.png">
+    					</a>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+
+    	<section id="recommandations">
+    		<div class="container">
+    			<div class="red-divider"></div>
+    			<div class="heading">
+    				<h2>Recommandations</h2>
+    			</div>
+    			<div id="mycarousel" class="carousel slide text-center" data-ride="carousel">
+    				<ol>
+    					<li data-target="mycarousel" data-slide-to="0" class="active"></li>
+    					<li data-target="mycarousel" data-slide-to="1"></li>
+    					<li data-target="mycarousel" data-slide-to="2"></li>
+    				</ol>
+    				<div class="carousel-inner" role="listbox">
+    					<div class="item active">
+    						<h3>"Wa Weld 3ammi, Fik Tsanti7 Bezaf !! Ou Ana Goult Lik Makat3refch"</h3>
+    						<h4>Weld 3ammi Dwida, Massachusetts Institute of Tsenti7 Co-founder</h4>
+    					</div>
+    					<div class="item">
+    						<h3>"Cousin, ça va ou quoi ? Ok Bye"</h3>
+    						<h4>Cousin Wael, "Dire Les Pates blCamoune" Founder</h4>
+    					</div>
+    					<div class="item">
+    						<h3>"Nta houwa Chef lkbir dla gare Sghira"</h3>
+    						<h4>Si Othmane, La Gare Lkbira founder</h4>
+    					</div>
+    				</div>
+    				<!-- Left and right controls -->
+    				    <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+    				      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    				      <span class="sr-only">Previous</span>
+    				    </a>
+    				    <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+    				      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    				      <span class="sr-only">Next</span>
+    				    </a>
+    			</div>
+    		</div>
+    	</section>
+
+    	<footer class="text-center">
+            <a href="#about">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <h5>© 2016</h5>
+        </footer>
+
+    </body>
 </html>
